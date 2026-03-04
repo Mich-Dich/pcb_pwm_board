@@ -6,7 +6,7 @@ The **PWM Board** is a 16‑channel PWM controller board designed for driving se
 
 ![Board Front](metadata/images/Screenshot_20260301_085102.png)
 ![Board Back](metadata/images/Screenshot_20260301_085104.png)
-![PCB Layout](metadata/images/Screenshot_20260301_085843.png)
+![PCB Layout](metadata/images/Screenshot_20260301_091005.png)
 
 ## Features
 
@@ -56,7 +56,7 @@ The **PWM Board** is a 16‑channel PWM controller board designed for driving se
 | 2   | +3V3          | 3.3 V logic supply (for servos/LEDs, check current limit) |
 | 3   | PWM signal    | PWM output from PCA9685 channel 0‑9                       |
 
-*Note:* The 3.3 V supply on these headers is derived from the on‑board regulator. Total current available for external loads depends on the input voltage and regulator capability (max ~1.5 A). For high‑power servos, use an external servo supply and only connect signal and GND.
+*Note:* The 3.3 V supply on these headers is derived from the on‑board regulator. Total current available for external loads depends on the input voltage and regulator capability (max ~5A). For high‑power servos, use an external servo supply and only connect signal and GND.
 
 ### Motor / MOSFET Outputs – J12 to J17 (1×02 pin headers)
 
@@ -79,7 +79,7 @@ Each output uses an N‑MOSFET (Q0–Q5) with the source connected to GND throug
 
 ### User Button – SW1
 
-Momentary push button connected to MCU pin PA6 (with an external pull‑up resistor R1). Pressing the button pulls the pin low.
+Momentary push button connected to MCU pin PA6. Pressing the button pulls the pin high.
 
 ### LEDs
 
@@ -91,7 +91,7 @@ Momentary push button connected to MCU pin PA6 (with an external pull‑up resis
 
 The board accepts a 12 V DC input on J10. An internal buck converter (U3, SY81051) generates 3.3 V for the logic and for the servo/LED headers. The 3.3 V rail is also available on the SWD header and can be used to power an external programmer if needed.
 
-**Important:** The total current drawn from the 3.3 V rail (including MCU, PCA9685, and any loads on the servo headers) must not exceed the regulator’s capability. Under typical conditions, the SY81051 can deliver up to 1.5 A, but thermal performance and input voltage will affect the actual limit.
+**Important:** The total current drawn from the 3.3 V rail (including MCU, PCA9685, and any loads on the servo headers) must not exceed the regulator’s capability. Under typical conditions, the SY81051 can deliver up to 5 A, but thermal performance and input voltage will affect the actual limit.
 
 ## Programming the STM32
 
@@ -120,7 +120,7 @@ The MCU is pre‑programmed with a bootloader or demo firmware? (If none, the us
 ## Mechanical Dimensions
 
 - Board outline: 51 mm × 41 mm (rectangular with rounded corners).
-- Four M2 mounting holes (2.2 mm diameter) at the corners (centers at (84.4,40.7), (129.4,40.7), (84.4,65.7), (129.4,65.7) in the board coordinate system).
+- Four M2 mounting holes (2.2 mm diameter) in a cub format fo size: 45x25 mm
 
 ## Bill of Materials (BOM)
 
@@ -128,7 +128,7 @@ A detailed BOM in CSV format is provided as `pwm_board.csv`. It includes all com
 
 ## License
 
-This project is open‑source hardware. The design files (KiCad) are provided under the CERN Open Hardware Licence Version 2 – Strongly Reciprocal, or any later version. See the `LICENSE` file for details.
+This project is licensed under the MIT License. The design files (KiCad) and any accompanying software or firmware are provided under the terms of this license. See the `LICENSE` file for details.
 
 ---
 

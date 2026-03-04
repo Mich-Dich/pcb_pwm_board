@@ -1268,24 +1268,28 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Switch:SW_DPST_x2"
+		(symbol "Switch:SW_Push"
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0)
+				(offset 1.016)
 				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "SW"
-				(at 0 3.175 0)
+				(at 1.27 2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Value" "SW_DPST_x2"
-				(at 0 -2.54 0)
+			(property "Value" "SW_Push"
+				(at 0 -1.524 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1293,7 +1297,7 @@
 				)
 			)
 			(property "Footprint" ""
-				(at 0 0 0)
+				(at 0 5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1302,6 +1306,15 @@
 				)
 			)
 			(property "Datasheet" "~"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Push button switch, generic, two pins"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1310,7 +1323,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Single Pole Single Throw (SPST) switch, separate symbol"
+			(property "ki_keywords" "switch normally-open pushbutton push-button"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1319,16 +1332,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "switch lever"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "SW_DPST_x2_0_0"
+			(symbol "SW_Push_0_1"
 				(circle
 					(center -2.032 0)
 					(radius 0.508)
@@ -1342,7 +1346,7 @@
 				)
 				(polyline
 					(pts
-						(xy -1.524 0.254) (xy 1.524 1.778)
+						(xy 0 1.27) (xy 0 3.048)
 					)
 					(stroke
 						(width 0)
@@ -1363,12 +1367,22 @@
 						(type none)
 					)
 				)
-			)
-			(symbol "SW_DPST_x2_1_1"
+				(polyline
+					(pts
+						(xy 2.54 1.27) (xy -2.54 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 				(pin passive line
 					(at -5.08 0 0)
 					(length 2.54)
-					(name "A"
+					(name "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1386,7 +1400,7 @@
 				(pin passive line
 					(at 5.08 0 180)
 					(length 2.54)
-					(name "B"
+					(name "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1394,44 +1408,6 @@
 						)
 					)
 					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "SW_DPST_x2_2_1"
-				(pin passive line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 0 180)
-					(length 2.54)
-					(name "B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1684,7 +1660,7 @@
 	)
 	(rectangle
 		(start 121.92 72.39)
-		(end 158.75 99.06)
+		(end 149.86 99.06)
 		(stroke
 			(width 0.0254)
 			(type dash)
@@ -1721,7 +1697,7 @@
 	)
 	(text "Programming Connector"
 		(exclude_from_sim no)
-		(at 139.954 101.092 0)
+		(at 135.89 101.092 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2123,6 +2099,16 @@
 	)
 	(wire
 		(pts
+			(xy 35.56 64.77) (xy 35.56 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "82edd868-3cdb-4225-81c3-a3995737ceff")
+	)
+	(wire
+		(pts
 			(xy 129.54 88.9) (xy 134.62 88.9)
 		)
 		(stroke
@@ -2233,6 +2219,16 @@
 	)
 	(wire
 		(pts
+			(xy 35.56 63.5) (xy 41.91 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "adf3a71b-4ac4-4d78-9a12-2ddb755bed90")
+	)
+	(wire
+		(pts
 			(xy 77.47 86.36) (xy 134.62 86.36)
 		)
 		(stroke
@@ -2280,16 +2276,6 @@
 			(type default)
 		)
 		(uuid "c4ed8a4c-06e3-4d4b-bc55-51338cd798e3")
-	)
-	(wire
-		(pts
-			(xy 34.29 63.5) (xy 41.91 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c890d7e6-519c-49f7-ada9-e28b92e087c4")
 	)
 	(wire
 		(pts
@@ -2843,7 +2829,7 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
@@ -2958,7 +2944,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 104.902 71.12 90)
 			(effects
 				(font
@@ -2985,7 +2971,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22843"
+		(property "JLCPCB Part #" "C25900"
 			(at 106.68 71.12 90)
 			(effects
 				(font
@@ -3278,7 +3264,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 97.282 71.12 90)
 			(effects
 				(font
@@ -3305,7 +3291,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22843"
+		(property "JLCPCB Part #" "C25900"
 			(at 99.06 71.12 90)
 			(effects
 				(font
@@ -3688,17 +3674,16 @@
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_DPST_x2")
+		(lib_id "Switch:SW_Push")
 		(at 154.94 43.18 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "72434804-89f8-469f-90a3-6548edc7f44f")
+		(uuid "73fed9ae-22cb-409a-88ce-2e5888be9f0c")
 		(property "Reference" "SW1"
-			(at 157.48 41.9099 90)
+			(at 157.734 41.656 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3707,7 +3692,7 @@
 			)
 		)
 		(property "Value" "USER_SW"
-			(at 157.48 44.4499 90)
+			(at 157.226 44.958 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3716,7 +3701,7 @@
 			)
 		)
 		(property "Footprint" "Custom:SW_PUSH_TS-1088-AR02016"
-			(at 154.94 43.18 0)
+			(at 160.02 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3725,7 +3710,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 154.94 43.18 0)
+			(at 160.02 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3733,7 +3718,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Single Pole Single Throw (SPST) switch, separate symbol"
+		(property "Description" "Push button switch, generic, two pins"
 			(at 154.94 43.18 0)
 			(effects
 				(font
@@ -3751,26 +3736,11 @@
 				(hide yes)
 			)
 		)
-		(property "Field9" ""
-			(at 154.94 43.18 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "4"
-			(uuid "cdeb98d9-8376-4e80-85ed-9d7016e26a30")
-		)
-		(pin "3"
-			(uuid "df4d4e57-e03e-4c38-9e35-ebec81148782")
-		)
 		(pin "1"
-			(uuid "13e41e06-9802-412b-bfd8-a5238d559221")
+			(uuid "8c897776-8438-41eb-8e44-1391e93f969f")
 		)
 		(pin "2"
-			(uuid "cdbc6edb-7910-4148-bc71-134ef8054443")
+			(uuid "052fc517-8ce6-4a0a-9ef7-bf93240b6f7b")
 		)
 		(instances
 			(project ""
@@ -3850,7 +3820,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 34.29 63.5 0)
+		(at 35.56 64.77 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3859,7 +3829,7 @@
 		(fields_autoplaced yes)
 		(uuid "7bd4693d-a0a4-49ee-be7d-416d75a46d8b")
 		(property "Reference" "#PWR020"
-			(at 34.29 69.85 0)
+			(at 35.56 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3868,7 +3838,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 34.29 68.58 0)
+			(at 35.56 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3877,7 +3847,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 34.29 63.5 0)
+			(at 35.56 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3886,7 +3856,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 34.29 63.5 0)
+			(at 35.56 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3895,7 +3865,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 34.29 63.5 0)
+			(at 35.56 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
