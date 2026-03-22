@@ -1,0 +1,6 @@
+/home/mich/workspace/PCB/pcb_pwm_board/cubeMX/build/CMakeFiles/cubeMX.dir
+/home/mich/workspace/PCB/pcb_pwm_board/cubeMX/build/CMakeFiles/edit_cache.dir
+/home/mich/workspace/PCB/pcb_pwm_board/cubeMX/build/CMakeFiles/rebuild_cache.dir
+/home/mich/workspace/PCB/pcb_pwm_board/cubeMX/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir
+/home/mich/workspace/PCB/pcb_pwm_board/cubeMX/build/cmake/stm32cubemx/CMakeFiles/edit_cache.dir
+/home/mich/workspace/PCB/pcb_pwm_board/cubeMX/build/cmake/stm32cubemx/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug STM32",
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "openocd",
+            "executable": "${workspaceFolder}/build/cubeMX.elf",
+            "device": "STM32L010x4",
+            "configFiles": [
+                "interface/stlink.cfg",
+                "target/stm32l0.cfg"
+            ],
+            "runToEntryPoint": "main",
+            "cwd": "${workspaceFolder}",
+            "gdbPath": "arm-none-eabi-gdb"   // Change this line
+        }
+    ]
+}
