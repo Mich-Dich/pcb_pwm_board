@@ -10,6 +10,20 @@
                 "isDefault": true
             },
             "problemMatcher": []
+        },
+        {
+            "label": "Flash",
+            "type": "shell",
+            "command": "STM32_Programmer_CLI",
+            "args": [
+                "-c", "port=SWD freq=4000",
+                "-e", "all",
+                "-w", "${workspaceFolder}/build/cubeMX.elf",
+                "-v",
+                "-rst"
+            ],
+            "group": "build",
+            "problemMatcher": []
         }
     ]
 }

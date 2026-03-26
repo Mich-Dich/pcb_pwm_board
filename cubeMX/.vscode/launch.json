@@ -5,16 +5,16 @@
             "name": "Debug STM32",
             "type": "cortex-debug",
             "request": "launch",
-            "servertype": "openocd",
+            "servertype": "stlink",                     // Use ST-Link gdbserver instead of OpenOCD
+            "serverpath": "/opt/st/stm32cubeide_2.0.0/plugins/com.st.stm32cube.ide.mcu.externaltools.stlink-gdb-server.linux64_2.2.300.202509021040/tools/bin/ST-LINK_gdbserver",
+            "interface": "swd",                         // Serial Wire Debug
             "executable": "${workspaceFolder}/build/cubeMX.elf",
             "device": "STM32L010x4",
-            "configFiles": [
-                "interface/stlink.cfg",
-                "target/stm32l0.cfg"
-            ],
             "runToEntryPoint": "main",
             "cwd": "${workspaceFolder}",
-            "gdbPath": "arm-none-eabi-gdb"   // Change this line
+            "gdbPath": "/opt/st/stm32cubeide_2.0.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.linux64_1.0.100.202509120712/tools/bin/arm-none-eabi-gdb",
+            "preLaunchTask": "Flash",                   // Build and flash before debugging
+            "loadFiles": []                             // Prevent Cortex-Debug from re‑flashing
         }
     ]
 }
