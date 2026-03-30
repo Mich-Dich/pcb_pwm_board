@@ -1,0 +1,60 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "CMake Configure",
+            "type": "shell",
+            "command": "cmake -S . -B build",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Build",
+            "type": "shell",
+            "command": "cmake --build build",
+            "dependsOn": ["CMake Configure"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Clean Build",
+            "type": "shell",
+            "command": "rm -rf build && cmake -B build && cmake --build build",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Flash",
+            "type": "shell",
+            "command": "STM32_Programmer_CLI",
+            "args": [
+                "--connect", "port=SWD",
+                "--erase", "all",
+                "--write", "${workspaceFolder}/build/cubeMX.elf",
+                "-v",
+                "-rst"
+            ],
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Build and Flash",
+            "dependsOn": ["Build"],
+            "dependsOrder": "sequence",   // runs Build first, then the command below
+            "type": "shell",
+            "command": "STM32_Programmer_CLI",
+            "args": [
+                "--connect", "port=SWD",
+                "--erase", "all",
+                "--write", "${workspaceFolder}/build/cubeMX.elf",
+                "-v",           // verify
+                "-rst"          // reset after programming
+            ],
+            "group": "build",
+            "problemMatcher": []
+        }
+    ]
+}

@@ -2925,7 +2925,7 @@
 			(uuid "4275b0cd-5a8d-46c4-b633-7f0dd7104b2e")
 		)
 		(instances
-			(project ""
+			(project "pwm_board"
 				(path "/71ddf0e9-b3bd-413d-a31e-e27757e0e466/86d7eb10-d134-4986-b82a-cc819e39ad23"
 					(reference "L2")
 					(unit 1)
@@ -3195,7 +3195,7 @@
 			(uuid "74918f16-b8de-42db-8347-fb037c8227d0")
 		)
 		(instances
-			(project ""
+			(project "pwm_board"
 				(path "/71ddf0e9-b3bd-413d-a31e-e27757e0e466/86d7eb10-d134-4986-b82a-cc819e39ad23"
 					(reference "D10")
 					(unit 1)
@@ -3597,7 +3597,7 @@
 			(uuid "72c6fb95-fe04-4483-8578-9f4f90b7c2c2")
 		)
 		(instances
-			(project ""
+			(project "pwm_board"
 				(path "/71ddf0e9-b3bd-413d-a31e-e27757e0e466/86d7eb10-d134-4986-b82a-cc819e39ad23"
 					(reference "C17")
 					(unit 1)
@@ -3833,7 +3833,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm"
 			(at 213.36 104.14 0)
 			(effects
 				(font
@@ -4341,7 +4341,7 @@
 			(uuid "91da3f93-d672-437a-95a4-eed825dc4616")
 		)
 		(instances
-			(project ""
+			(project "pwm_board"
 				(path "/71ddf0e9-b3bd-413d-a31e-e27757e0e466/86d7eb10-d134-4986-b82a-cc819e39ad23"
 					(reference "C16")
 					(unit 1)
@@ -4886,7 +4886,7 @@
 			(uuid "5a65084f-5aeb-44b0-a613-13aa1de2c1ca")
 		)
 		(instances
-			(project ""
+			(project "pwm_board"
 				(path "/71ddf0e9-b3bd-413d-a31e-e27757e0e466/86d7eb10-d134-4986-b82a-cc819e39ad23"
 					(reference "U6")
 					(unit 1)
@@ -4920,7 +4920,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm"
 			(at 213.36 53.34 0)
 			(effects
 				(font

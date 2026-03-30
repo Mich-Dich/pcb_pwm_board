@@ -1,0 +1,6 @@
+mx.scratch
+!.settings
+
+.cache/
+Debug/
+build/

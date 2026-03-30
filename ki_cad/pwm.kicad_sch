@@ -7229,7 +7229,7 @@
 			(uuid "5d07cecc-fe4c-4bb1-b6ea-6704ac30d0f7")
 		)
 		(instances
-			(project ""
+			(project "pwm_board"
 				(path "/71ddf0e9-b3bd-413d-a31e-e27757e0e466/237aaa47-abeb-4767-bd50-ef49ee79a71f"
 					(reference "#PWR013")
 					(unit 1)
@@ -7586,7 +7586,7 @@
 			(uuid "8b98e3b2-4cd3-4eda-b7aa-ab700ba802f2")
 		)
 		(instances
-			(project ""
+			(project "pwm_board"
 				(path "/71ddf0e9-b3bd-413d-a31e-e27757e0e466/237aaa47-abeb-4767-bd50-ef49ee79a71f"
 					(reference "D4")
 					(unit 1)
@@ -11648,7 +11648,7 @@
 			(uuid "7e7aae35-c061-4983-9fa5-8e1e68120ec6")
 		)
 		(instances
-			(project ""
+			(project "pwm_board"
 				(path "/71ddf0e9-b3bd-413d-a31e-e27757e0e466/237aaa47-abeb-4767-bd50-ef49ee79a71f"
 					(reference "U5")
 					(unit 1)
