@@ -1,11 +1,4 @@
 
-# STUFF 
-
-rm -rf build
-cmake -S . -B build
-cmake --build build
-
-rm -rf build && cmake -S . -B build && cmake --build build
 
 ## install required packages
 ```

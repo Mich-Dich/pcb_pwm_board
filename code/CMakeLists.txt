@@ -49,8 +49,11 @@ target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     "CTRL/application.cpp"
     "CTRL/PWM/PWM.cpp"
+    "CTRL/PWM/PCA9635.cpp"
     # Add user sources here
 )
+
+add_compile_options(-mcpu=cortex-m0plus -mthumb -mfloat-abi=soft)
 
 # Add include paths
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
